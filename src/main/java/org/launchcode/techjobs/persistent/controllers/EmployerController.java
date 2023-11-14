@@ -21,10 +21,10 @@ public class EmployerController {
     @GetMapping("/")
     public String index (Model model) {
         model.addAttribute("Employer", employerRepository.findAll());
-        //should it be Employer??
+        //its pointing to the model
         return "employers/index";
     }
-    //not sure if it's correct???
+
 
     @GetMapping("add")
     public String displayAddEmployerForm(Model model) {
